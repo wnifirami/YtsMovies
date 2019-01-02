@@ -1,6 +1,7 @@
 package com.example.macprosam.ytsmovies;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -30,7 +31,7 @@ import java.util.Map;
 public class Acceuil extends AppCompatActivity {
     List<Movie> listm = new ArrayList<>();
     List<Movie> mmm = new ArrayList<>();
-
+ActionBar bar;
 Button b;
     RecyclerView mRecyclerView;
     int[] mPlaceList;
@@ -43,7 +44,8 @@ Button b;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuil);
-
+bar=getSupportActionBar();
+bar.hide();
         mRecyclerView = findViewById(R.id.rv);
        /* GridLayoutManager mGridLayoutManager = new GridLayoutManager(Acceuil.this, 2);
         mRecyclerView.setLayoutManager(mGridLayoutManager);*/
